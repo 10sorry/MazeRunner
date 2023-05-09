@@ -12,7 +12,9 @@ public class level2 : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private Player _player;
     [SerializeField] private Exit _exitFromLevel;
-    
+    [SerializeField] private bool isOnLevel2;
+    [SerializeField] private bool isOnLevel3;
+
     private float _timer = 0;
     private bool _gameIsEnded = false;
 
@@ -67,7 +69,8 @@ public class level2 : MonoBehaviour
             return;
 
         Lose();
-    }
+
+        }
 
     private void LookAtPlayerInventory()
     {
@@ -79,7 +82,11 @@ public class level2 : MonoBehaviour
     {
         _gameIsEnded = true;
         _player.Disable();
-        SceneManager.LoadScene("level 3");
+        if(isOnLevel2)
+            SceneManager.LoadScene("level 3");
+        if(isOnLevel3)
+            SceneManager.LoadScene("level 4");
+
         Debug.LogError("Victory");
     }
 

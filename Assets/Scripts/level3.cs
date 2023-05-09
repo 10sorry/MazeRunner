@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
@@ -12,6 +13,7 @@ public class level3 : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private Player _player;
     [SerializeField] private Exit _exitFromLevel;
+    
     
     private float _timer = 0;
     private bool _gameIsEnded = false;
@@ -63,11 +65,11 @@ public class level3 : MonoBehaviour
 
     private void LookAtPlayerHealth()
     {
-        if(_player.IsAlive)
+        if (_player.IsAlive)
             return;
-
         Lose();
     }
+    
 
     private void LookAtPlayerInventory()
     {
@@ -75,11 +77,11 @@ public class level3 : MonoBehaviour
             _exitFromLevel.Open();
     }
 
-    public void Victory()
+    private void Victory()
     {
         _gameIsEnded = true;
         _player.Disable();
-        SceneManager.LoadScene("level 3");
+        SceneManager.LoadScene("level 4");
         Debug.LogError("Victory");
     }
 
@@ -88,4 +90,5 @@ public class level3 : MonoBehaviour
         _gameIsEnded = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    
 }

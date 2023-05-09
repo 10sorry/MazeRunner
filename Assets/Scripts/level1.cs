@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class level1 : MonoBehaviour
 {
@@ -12,6 +13,10 @@ public class level1 : MonoBehaviour
     [Header("Objects")]
     [SerializeField] private Player _player;
     [SerializeField] private Exit _exitFromLevel;
+    
+    [SerializeField] private bool isOnLevel1;
+    [SerializeField] private bool isOnLevel4;
+    
     
     private float _timer = 0;
     private bool _gameIsEnded = false;
@@ -60,7 +65,7 @@ public class level1 : MonoBehaviour
         if(flatExitPosition == flatPlayerPosition)
             Victory();
     }
-
+    
     private void LookAtPlayerHealth()
     {
         if(_player.IsAlive)
@@ -79,10 +84,13 @@ public class level1 : MonoBehaviour
     {
         _gameIsEnded = true;
         _player.Disable();
-        SceneManager.LoadScene("level 2");
+        if(isOnLevel1)
+            SceneManager.LoadScene("level 2");
+        if(isOnLevel4)
+            SceneManager.LoadScene("victory");
         Debug.LogError("Victory");
     }
-
+    
     public void Lose()
     {
         _gameIsEnded = true;

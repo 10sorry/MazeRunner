@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     public bool IsAlive { get; private set; } = true;
     public bool HasKey { get; private set; } = false;
+    public level2 _level3;
     public GameObject portalEnter;
     
     private Movement _movement;
@@ -33,6 +34,7 @@ public class Player : MonoBehaviour
     public void Kill()
     {
         IsAlive = false;
+
     }
 
     public void PickUpKey()

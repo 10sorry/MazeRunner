@@ -2399,6 +2399,8 @@ MonoBehaviour:
   _timerView: {fileID: 1910796155}
   _player: {fileID: 157217782}
   _exitFromLevel: {fileID: 1079131290}
+  isOnLevel1: 1
+  isOnLevel4: 0
 --- !u!1001 &634788103
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6117,6 +6119,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1682080971}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &1694058697 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 238714353399616377, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+    type: 3}
+  m_PrefabInstance: {fileID: 238714354954050480}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1724968026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7383,6 +7391,75 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2138903695}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &238714354954050480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 157217780}
+    m_Modifications:
+    - target: {fileID: 238714353399616375, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_Name
+      value: stepsSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 238714353399616376, guid: f8b99b6be89b6fd4aa212ec020fc8f1d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f8b99b6be89b6fd4aa212ec020fc8f1d, type: 3}
 --- !u!1001 &1404325981398455145
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7603,6 +7680,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5495990994628867839, guid: def0d7c28415846849bc66d659452ab4,
+        type: 3}
+      propertyPath: stepsSource
+      value: 
+      objectReference: {fileID: 1694058697}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: def0d7c28415846849bc66d659452ab4, type: 3}
 --- !u!1001 &6975853962387573745
@@ -7756,6 +7838,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 123024049}
     m_Modifications:
+    - target: {fileID: 953496999, guid: af4fc89eaef3845c7a9d66dc41f56244, type: 3}
+      propertyPath: keyCollect
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8308639849551283392, guid: af4fc89eaef3845c7a9d66dc41f56244,
         type: 3}
       propertyPath: m_Name
